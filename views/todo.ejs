@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <title> A simple to do app </title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="/assets/todo-list.js"></script>
+    <link href="/assets/styles.css" rel="stylesheet" type="text/css"/>
+  </head>
+  <body>
+    <h1>My to do List</h1>
+    <div>
+      <form>
+        <input type="text" name="item" placeholder="Add new item ..." required/>
+        <button type="submit">Add Item</button>
+      </form>
+      <ul>
+          <% for(var i=0; i < data.length; i++){ %>
+            <li><%= data[i].item %></li>
+
+          <% } %>
+      </ul>
+    </div>
+  </body>
+</html>
